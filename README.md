@@ -10,5 +10,7 @@ Treatments: <br/>
 5/3/2022 - 5/10/2022 <br/>
 
 Deaths: <br/>
-**Tank A**: #4, #7, one extra (5/9) <br/>
-**Tank B**: #13, one extra (5/9) <br/>
+**Tank A**:<br/> #4, #7, one extra (5/9) <br/> #8, #10 (5/10) <br/> 5 Total dead 
+**Tank B**:<br/> #13, one extra (5/9) <br/> #18, one extra (5/10) <br/> 4 Total dead
+**Tank C**: <br/> 0 Total dead <br/>
+
