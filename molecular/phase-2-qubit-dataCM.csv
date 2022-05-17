@@ -1,0 +1,22 @@
+qubit,,,
+sample,score,dilution 1:10,treatment
+50,too high,26.8,A
+51,too high,142,A
+54,too high,34,A
+59,too high,27,A
+62,89.8,,A
+66,23.8,,A
+67,too high,8.76,A
+69,too high,42.2,A
+71,too high,15.7,B
+73,176,,B
+76,41.6,,B
+77,200,,B
+81,too low,,B
+87,6.94,,B
+88,9.98,,B
+89,24,,B
+90,4.8,,C
+91,37.8,,C
+93,too low,,C
+100,34.2,,C
