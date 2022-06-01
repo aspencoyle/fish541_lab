@@ -1,0 +1,22 @@
+---
+title: ""
+author: "Sarah Tanja"
+date: "5/31/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Protocol
+- [ ] Add 2 $/mu$l of RNA sample to a 0.5ml vial
+- [ ] Add 16 $/mu$l of sigma water
+
+** aim for 100ng of RNA per 1$/mu$l primer **
+
+- [ ] Add 1 $/mu$l of oligo dT primer
+- [ ] Incubate at 70C for 5 minutes using Peltier Thermal Cycler (PTC-200) 
+- [ ] 
+
+# Narrative
