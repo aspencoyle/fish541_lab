@@ -14,7 +14,7 @@ Experiment 2
 Treatments: <br/>
 **Tank A**: chronic 18C <br/>
 **Tank B**: variable 15C/21C cycling (5hr hold, 1hr transition) <br/>
-**Tank C**: control 13C
+**Tank C**: control 12C
 
 Deaths: <br/>
 **Tank A**: #4, #7, one extra (5/9), #8, #10 (5/10)  [5 Total dead] <br/>
