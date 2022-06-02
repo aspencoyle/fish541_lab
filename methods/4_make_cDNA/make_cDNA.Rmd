@@ -14,42 +14,40 @@ For each RNA sample, it is recommended to produce cDNA in duplicate or triplicat
 
 
 ### Step 1
-- [ ] Label 0.5ml vials with RNA sample ID (ex. 001) and a duplicate indicator (ex. a, b, c)
+- [ ] Label empty 0.5ml vials with RNA sample ID (ex. 001) and a duplicate indicator (ex. a, b, c)
 
-Aim for $100ng of RNA$ in $18\mu l$ of  $H_{2}O$
+> Aim for $100ng$ of RNA in $18\mu l$ of $H_{2}O$
 
-$$ RNA \mu l = \frac{100 ng }{qubit score (\frac{ng}{\mu l}) } $$
-    
-    
-$$ sigma H_{2}O (\mu l) = \frac{100 (ng) }{qubit score (\frac{ng}{\mu l}) - 18 \mu l $$
+$$RNA (\mu l) = \frac{100(ng) }{qubit score (\frac{ng}{\mu l})}$$
+$$H_{2}O (\mu l) = \frac{100 (ng)}{qubit score (\frac{ng}{\mu l})} - 18 (\mu l)$$
+
+- ex. If qubit scores average 100ng of RNA, add 1 $\mu$l of RNA to 17$\mu$l of $H_{2}O$
+- ex. If qubit scores average 50ng of RNA, add 2$\mu$l of RNA to 16$\mu$l of $H_{2}O$
   
-*ex. If qubit scores average 100ng of RNA, add 1$/mu$l of RNA to 17$/mu$l of sigma H$_[{2}$0*
-*ex. If qubit scores average 50ng of RNA, add 2$/mu$l of RNA to 16$/mu$l of sigma H$_[{2}$0*
+**In our case, RNA dilutions averaged about 50ng of RNA**
 
-- [ ] Add 2 $/mu$l of RNA sample to each corresponding 0.5ml vial
-- [ ] Add 16 $/mu$l of sigma water
+- [ ] Add 2 $\mu$l of RNA sample to each corresponding 0.5ml conical vial
+- [ ] Add 16 $\mu$l of water
 
 
-- [ ] Add 1 $/mu$l of oligo dT primer
-- [ ] Incubate at 70$^{\circ}$C for 5 minutes in a thermal cycler 
+- [ ] Add 1 $\mu$l of [oligo dT primer](https://www.promega.com/products/pcr/rt-pcr/oligodt15-primer/?catNum=C1101)
+- [ ] Incubate at 70$^{\circ}$C for 5 minutes in a [thermal cycler](https://www.gmi-inc.com/product/mj-research-ptc-200-thermal-cycler/?keyword=&leadsource=googleads&gclid=CjwKCAjwv-GUBhAzEiwASUMm4nXESmFnIytXh_pgMDgRvrwjdC1uKNtG6kuHIDLrj50NLrOconDMQxoC2nwQAvD_BwE) 
 
 ### Step 2
 - [ ] Make a master mix of the following components, 
       multiplied by the number of sample vials you are working with.
-       
+   - 5$\mu$l [M-MLV Buffer](https://www.promega.com/products/pcr/rt-pcr/m-mlv-reverse-transcriptase/?catNum=M5313)
+   - 1.25$\mu$l [dNTP](https://www.promega.com/products/pcr/taq-polymerase/dntp-mix/?catNum=U1511) (stable Nucleotide mix)
+   - 0.5$\mu$l [M-MLV](https://www.promega.com/products/pcr/rt-pcr/m-mlv-reverse-transcriptase/?catNum=M1701) (Reverse Transcriptase)
       
-      5$/mu$l MMLV Buffer
-      1.25$/mu$l dNTP
-      0.5$/mu$l MMLV
-      
-- [ ] Add 6.75$/mu$l of master mix to each sample vial
+- [ ] Add 6.75$\mu$l of master mix to each sample vial
 - [ ] Incubate at 42$^{\circ}$C for 1 hour in a thermal cycler 
 - [ ] Incubate at 95$^{\circ}$C for 3 minutes in a thermal cycler
 - [ ] Store frozen in a standard -20$^{\circ}$C freezer
 
 # Method Narrative
 
-We took 11 extracted gill-tissue RNA samples from each of treatments A (chronic 18C) and B (variable cycling) and 10 extracted RNA samples from the control group C ()
+We took 11 extracted gill-tissue RNA samples from each of treatments A (chronic 18$^{\circ}$C) and B (variable cycling) and 10 extracted RNA samples from the control group C (held at 12$^{\circ}$C). We aliquoted 2 $\mu$l of each RNA samples were then 
 
 # Detailed Narrative
 05/31/22

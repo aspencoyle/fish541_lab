@@ -182,44 +182,51 @@ pre code {
 <h3>Step 1</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled></input>
-Label 0.5ml vials with RNA sample ID (ex. 001) and a duplicate indicator(ex. a, b, c)</li>
+Label empty 0.5ml vials with RNA sample ID (ex. 001) and a duplicate indicator (ex. a, b, c)</li>
 </ul>
-<p>Aim for 100ng of RNA in <span class="math inline">\(18\mu l\)</span> of sigma <span class="math inline">\(H_{2}O\)</span></p>
-<p><span class="math display">\[ RNA \mu l = \frac{100 ng }{qubit score (\frac{ng}{\mu l}) } \]</span></p>
-<p><span class="math display">\[ sigma H_{2}O (\mu l) = \frac{100 (ng) }{qubit score (\frac{ng}{\mu l}) - 18 \mu l \]</span></p>
-<p><em>ex. If qubit scores average 100ng of RNA, add 1<span class="math inline">\(/mu\)</span>l of RNA to 17<span class="math inline">\(/mu\)</span>l of sigma H$<em>[{2}<span class="math inline">\(0* *ex. If qubit scores average 50ng of RNA, add 2\)</span>/mu<span class="math inline">\(l of RNA to 16\)</span>/mu<span class="math inline">\(l of sigma H\)</span></em>[{2}$0</em></p>
+<blockquote>
+<p>Aim for <span class="math inline">\(100ng\)</span> of RNA in <span class="math inline">\(18\mu l\)</span> of <span class="math inline">\(H_{2}O\)</span></p>
+</blockquote>
+<p><span class="math display">\[RNA (\mu l) = \frac{100(ng) }{qubit score (\frac{ng}{\mu l})}\]</span> <span class="math display">\[H_{2}O (\mu l) = \frac{100 (ng)}{qubit score (\frac{ng}{\mu l})} - 18 (\mu l)\]</span></p>
+<ul>
+<li>ex. If qubit scores average 100ng of RNA, add 1 <span class="math inline">\(\mu\)</span>l of RNA to 17<span class="math inline">\(\mu\)</span>l of <span class="math inline">\(H_{2}O\)</span></li>
+<li>ex. If qubit scores average 50ng of RNA, add 2<span class="math inline">\(\mu\)</span>l of RNA to 16<span class="math inline">\(\mu\)</span>l of <span class="math inline">\(H_{2}O\)</span></li>
+</ul>
+<p><strong>In our case, RNA dilutions averaged about 50ng of RNA</strong></p>
 <ul class="task-list">
 <li><p><input type="checkbox" disabled></input>
-Add 2 <span class="math inline">\(/mu\)</span>l of RNA sample to each corresponding 0.5ml vial</p></li>
+Add 2 <span class="math inline">\(\mu\)</span>l of RNA sample to each corresponding 0.5ml conical vial</p></li>
 <li><p><input type="checkbox" disabled></input>
-Add 16 <span class="math inline">\(/mu\)</span>l of sigma water</p></li>
+Add 16 <span class="math inline">\(\mu\)</span>l of water</p></li>
 <li><p><input type="checkbox" disabled></input>
-Add 1 <span class="math inline">\(/mu\)</span>l of oligo dT primer</p></li>
+Add 1 <span class="math inline">\(\mu\)</span>l of <a href="https://www.promega.com/products/pcr/rt-pcr/oligodt15-primer/?catNum=C1101">oligo dT primer</a></p></li>
 <li><p><input type="checkbox" disabled></input>
-Incubate at 70<span class="math inline">\(^{\circ}\)</span>C for 5 minutes in a thermal cycler</p></li>
+Incubate at 70<span class="math inline">\(^{\circ}\)</span>C for 5 minutes in a <a href="https://www.gmi-inc.com/product/mj-research-ptc-200-thermal-cycler/?keyword=&amp;leadsource=googleads&amp;gclid=CjwKCAjwv-GUBhAzEiwASUMm4nXESmFnIytXh_pgMDgRvrwjdC1uKNtG6kuHIDLrj50NLrOconDMQxoC2nwQAvD_BwE">thermal cycler</a></p></li>
 </ul>
 </div>
 <div id="step-2" class="section level3">
 <h3>Step 2</h3>
 <ul class="task-list">
-<li><p><input type="checkbox" disabled></input>
-Make a master mix of the following components, multiplied by the number of sample vials you are working with.</p><pre><code>5$/mu$l MMLV Buffer
-1.25$/mu$l dNTP
-0.5$/mu$l MMLV</code></pre></li>
-<li><p><input type="checkbox" disabled></input>
-Add 6.75<span class="math inline">\(/mu\)</span>l of master mix to each sample vial</p></li>
-<li><p><input type="checkbox" disabled></input>
-Incubate at 42<span class="math inline">\(^{\circ}\)</span>C for 1 hour in a thermal cycler</p></li>
-<li><p><input type="checkbox" disabled></input>
-Incubate at 95<span class="math inline">\(^{\circ}\)</span>C for 3 minutes in a thermal cycler</p></li>
-<li><p><input type="checkbox" disabled></input>
-Store frozen in a standard -20<span class="math inline">\(^{\circ}\)</span>C freezer</p></li>
+<li><input type="checkbox" disabled></input>
+Make a master mix of the following components, multiplied by the number of sample vials you are working with.<ul>
+<li>5<span class="math inline">\(\mu\)</span>l <a href="https://www.promega.com/products/pcr/rt-pcr/m-mlv-reverse-transcriptase/?catNum=M5313">M-MLV Buffer</a></li>
+<li>1.25<span class="math inline">\(\mu\)</span>l <a href="https://www.promega.com/products/pcr/taq-polymerase/dntp-mix/?catNum=U1511">dNTP</a> (stable Nucleotide mix)</li>
+<li>0.5<span class="math inline">\(\mu\)</span>l <a href="https://www.promega.com/products/pcr/rt-pcr/m-mlv-reverse-transcriptase/?catNum=M1701">M-MLV</a> (Reverse Transcriptase)</li>
+</ul></li>
+<li><input type="checkbox" disabled></input>
+Add 6.75<span class="math inline">\(\mu\)</span>l of master mix to each sample vial</li>
+<li><input type="checkbox" disabled></input>
+Incubate at 42<span class="math inline">\(^{\circ}\)</span>C for 1 hour in a thermal cycler</li>
+<li><input type="checkbox" disabled></input>
+Incubate at 95<span class="math inline">\(^{\circ}\)</span>C for 3 minutes in a thermal cycler</li>
+<li><input type="checkbox" disabled></input>
+Store frozen in a standard -20<span class="math inline">\(^{\circ}\)</span>C freezer</li>
 </ul>
 </div>
 </div>
 <div id="method-narrative" class="section level1">
 <h1>Method Narrative</h1>
-<p>We took 11 extracted gill-tissue RNA samples from each of treatments A (chronic 18C) and B (variable cycling) and 10 extracted RNA samples from the control group C ()</p>
+<p>We took 11 extracted gill-tissue RNA samples from each of treatments A held at a (chronic 18<span class="math inline">\(^{\circ}\)</span>C) and B (variable cycling) and 10 extracted RNA samples from the control group C (held at 12<span class="math inline">\(^{\circ}\)</span>C).</p>
 </div>
 <div id="detailed-narrative" class="section level1">
 <h1>Detailed Narrative</h1>
