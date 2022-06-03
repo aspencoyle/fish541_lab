@@ -4,6 +4,23 @@ author: "Olivia Cattau"
 date: "6/3/2022"
 output: html_document
 ---
+## Making plots for Experiment 1
+### load data
+```{r}
+EXP1<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP 1/exp1_qPCR_results.csv")
+names(EXP1)[8]<-'Cq'
+```
+### do GLM analysis for p-values
+```{r}
+library(ggplot2)
+library(ggsignif)
+library(rstatix)
+p1<-ggplot(data=EXP1)+geom_boxplot(aes(x=Treatment, y=Cq))+theme_bw()
+p1
+g1<-glm(EXP1$Cq~EXP1$Treatment)
+summary(g1)
+```
+
 
 ## Making plots for Experiment 2
 ### load data
@@ -11,13 +28,13 @@ output: html_document
 EXP2<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP 2/exp2_run1_PCR_results.csv")
 names(EXP2)[8]<-'Cq'
 ```
-## Make Plot with ggpplot2
 ### do GLM analysis for p-values
 ```{r}
 library(ggplot2)
 library(ggsignif)
 library(rstatix)
-p1<-ggplot(data=EXP2)+geom_boxplot(aes(x=Treatment, y=Cq))+theme_bw()
-g1<-glm(EXP2$Cq~EXP2$Treatment)
-summary(g1)
+p2<-ggplot(data=EXP2)+geom_boxplot(aes(x=Treatment, y=Cq))+theme_bw()
+p2
+g2<-glm(EXP2$Cq~EXP2$Treatment)
+summary(g2)
 ```
