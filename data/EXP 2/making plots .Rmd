@@ -1,0 +1,15 @@
+---
+title: "Making plots"
+author: "Olivia Cattau"
+date: "6/3/2022"
+output: html_document
+---
+
+## Making plots for Experiment 2
+### load data
+```{r}
+EXP2<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP 2/exp2_run1_qPCR_results.csv")
+mydata<-EXP2[-c(1),] #clean data
+
+
+```
