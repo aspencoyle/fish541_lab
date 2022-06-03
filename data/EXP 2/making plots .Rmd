@@ -8,8 +8,16 @@ output: html_document
 ## Making plots for Experiment 2
 ### load data
 ```{r}
-EXP2<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP 2/exp2_run1_qPCR_results.csv")
-mydata<-EXP2[-c(1),] #clean data
-
-
+EXP2<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP 2/exp2_run1_PCR_results.csv")
+names(EXP2)[8]<-'Cq'
+```
+## Make Plot with ggpplot2
+### do GLM analysis for p-values
+```{r}
+library(ggplot2)
+library(ggsignif)
+library(rstatix)
+p1<-ggplot(data=EXP2)+geom_boxplot(aes(x=Treatment, y=Cq))+theme_bw()
+g1<-glm(EXP2$Cq~EXP2$Treatment)
+summary(g1)
 ```
