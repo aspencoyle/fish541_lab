@@ -5,7 +5,7 @@
 3. [qPCR Protocol](https://github.com/RobertsLab/resources/blob/master/protocols/reverse_transcription.md)
 4. [respirometry results](https://github.com/afcoyle/fish541_lab/blob/main/respirometry/output/respirometry_summary.xlsx)
 
-Experiment 1
+Experiment 1: <br/>
 1 hour exposure
 Results: not statistically significant (no difference between control and experiment)
 
