@@ -6,7 +6,8 @@
 4. [respirometry results](https://github.com/afcoyle/fish541_lab/blob/main/respirometry/output/respirometry_summary.xlsx)
 
 Experiment 1
-
+1 hour exposure
+Results: not statistically significant (no difference between control and experiment)
 
 Experiment 2
 5/3/2022 - 5/10/2022 <br/>
