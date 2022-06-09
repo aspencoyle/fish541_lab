@@ -1,0 +1,17 @@
+---
+title: "qPCR Methods"
+author: "Zach Bengtsson"
+date: "6/9/2022"
+output: rmarkdown::github_document
+---
+
+### Primer selection
+
+### cDNA dilution
+
+### Super Mix Preparation
+
+### Plating
+
+### qPCR run and data collection
+
