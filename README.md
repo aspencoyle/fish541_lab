@@ -11,6 +11,8 @@ Results: not statistically significant (no difference between control and experi
 
 Experiment 2
 5/3/2022 - 5/10/2022 <br/>
+**Treatment A: Significantly different from control and B group**  <br/>
+Treatment B: NOT signficantly differnet from control 
 
 Treatments: <br/>
 **Tank A**: chronic 18C <br/>
@@ -21,4 +23,7 @@ Deaths: <br/>
 **Tank A**: #4, #7, one extra (5/9), #8, #10 (5/10)  [5 Total dead] <br/>
 **Tank B**: #13, one extra (5/9), #18, one extra (5/10) [4 Total dead] <br/>
 **Tank C**: [0 Total dead] <br/>
+
+Conclusions:  <br/>
+The chronic treatment (group A) was significantly more stressed than the control or group B (variable temperature cycling) 
 
