@@ -25,5 +25,7 @@ Deaths: <br/>
 **Tank C**: [0 Total dead] <br/>
 
 Conclusions:  <br/>
-The chronic treatment (group A) was significantly more stressed than the control or group B (variable temperature cycling) 
+The chronic treatment (group A) showed significantly higher signs of stress than the control or group B (variable temperature cycling) according to qPCR results for HSC70 expression (results below).
+
+![iamge](https://github.com/afcoyle/fish541_lab/blob/main/resources/img/HSC70_violin_plot.png?raw=true)
 
