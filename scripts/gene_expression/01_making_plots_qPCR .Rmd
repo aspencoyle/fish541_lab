@@ -1,0 +1,53 @@
+---
+title: "Making plots"
+author: "Olivia Cattau"
+date: "6/3/2022"
+output: html_document
+---
+## Making plots for Experiment 1
+### load data
+```{r}
+EXP1<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP_1/exp1_qPCR_results.csv")
+names(EXP1)[8]<-'Cq'
+```
+### do GLM analysis for p-values (HSC70)
+```{r}
+library(ggplot2)
+library(ggsignif)
+library(rstatix)
+p1<-ggplot(data=EXP1)+geom_violin(aes(x=Treatment, y=Cq))+theme_bw()
+p1
+g1<-glm(EXP1$Cq~EXP1$Treatment)
+summary(g1) #not signficantly different 
+```
+
+
+## Making plots for Experiment 2
+### load data
+```{r}
+EXP2<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP_2/exp2_compiled_results_hsp70.csv")
+names(EXP2)[8]<-'Cq'
+```
+### do GLM analysis for p-values (HSC70)
+```{r}
+library(ggplot2)
+library(ggsignif)
+library(rstatix)
+p2<-ggplot(data=EXP2)+geom_violin(aes(x=Treatment, y=Cq))+theme_bw()
+p2
+g2<-glm(EXP2$Cq~EXP2$Treatment)
+summary(g2)
+```
+
+### do GLM analysis for p-values (GADD45)
+```{r}
+EXP2b<-read.csv(file="/Users/oliviacattau/Documents/GitHub/fish541_lab/data/EXP_2/exp2_compiled_results_gadd45.csv")
+names(EXP2b)[8]<-'Cq'
+library(ggplot2)
+library(ggsignif)
+library(rstatix)
+p3<-ggplot(data=EXP2b)+geom_violin(aes(x=Treatment, y=Cq))+theme_bw()
+p3
+g3<-glm(EXP2b$Cq~EXP2b$Treatment)
+summary(g3)
+```
