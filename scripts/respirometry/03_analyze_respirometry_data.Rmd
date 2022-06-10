@@ -1,5 +1,5 @@
 ---
-title: "01_analyzing_respirometry_data.Rmd"
+title: "03_analyzing_respirometry_data.Rmd"
 author: "Aidan Coyle"
 date: "6/10/2022"
 output: html_document
@@ -9,22 +9,67 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+This script is meant to analyze respirometry data previously collected as part of Experiment 2. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Respiration data was collected on 10 experimental mussels from each experimental group at the start of the experiment (1-20) and all living experimental mussels, all control mussels, and some un at the end of the experiment. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+First, load all required libraries, installing those that aren't yet loaded
+
+```{r libraries, message = FALSE, warning=FALSE}
+# Add all required libraries that are installed with install.packages() here
+list.of.packages <- c("tidyverse", "readxl")
+# Add all libraries that are installed using BiocManager here
+bioconductor.packages <- ""
+
+# Install BiocManager if needed
+if(!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+
+# Get names of all required packages that aren't installed
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[, "Package"])]
+new.bioc.packages <- bioconductor.packages[!(bioconductor.packages %in% installed.packages()[, "Package"])]
+# Install all new packages
+if(length(new.packages)) install.packages(new.packages)
+if(length(new.bioc.packages)) BiocManager::install(new.bioc.packages)
+
+# Load all required libraries
+all.packages <- c(list.of.packages, bioconductor.packages)
+lapply(all.packages, FUN = function(X) {
+  do.call("require", list(X))
+})
+```
+# Read in data
+
+```{r}
+# Read in respiration data
+
+resp_dat <- read_excel("../../output/EXP_2/respirometry/respirometry_summary.xlsx")
+
+# Change date from linear to binary
+resp_dat$date <- as.character(resp_dat$date)
 ```
 
-## Including Plots
+# Graph 1: Bar graph of time and treatment
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+pdf(file = "../../output/EXP_2/respirometry/results_bar_graph.pdf")
+ggplot(data = test, aes(x = date, y = umol_L_hr_cm, fill = trt)) +
+  geom_bar(position = "dodge", stat = "identity")
+
+dev.off()
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Graph 2: Scatter plot of value before and after treatment
+
+```{r}
+resp_dat %>%
+  group_by(mussel_ID) %>%
+  ggplot(aes(x = date, y = umol_L_hr_cm, col = trt)) +
+  geom_point()
+
+
+```
+
