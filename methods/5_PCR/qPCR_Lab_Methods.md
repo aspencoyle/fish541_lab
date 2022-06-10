@@ -17,9 +17,25 @@ A 1:10 dilution was made for each cDNA sample to be run through qPCR:
 * 18ul molecular grade H2O
 * 2ul sample
 
-### Super Mix Preparation
+### Primer dilution
+Forward and reverse primers are sent at 100uM concentration. We diluted primers to 10uM for qPCR. For each primer:
+* 90ul molecular grade H2O
+* 10ul primer
 
+Resulting in:
+* 10uM HSC70 Forward
+* 10uM HSC70 Reverse
+* 10uM GADD45 gamma Forward
+* 10uM GADD45 gamma Reverse
+
+### Mix Preparation
+**Separate mix made for each primer set, one for HSC70 F/R and another for GADD45 gamma** 
+Mix of dNTPs, buffer, polymerase, molecular grade H20, and forward/reverse primers made to follow specifications per sample:
+* 
 
 ### Plating
 
 ### qPCR run and data collection
+
+### Whiteboard Overview
+![image](https://github.com/afcoyle/fish541_lab/blob/main/assets/img/qPCR_methods_overview.jpeg?raw=true)
