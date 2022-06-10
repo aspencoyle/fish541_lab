@@ -18,7 +18,7 @@ library(rstatix)
 p1<-ggplot(data=EXP1)+geom_violin(aes(x=Treatment, y=Cq))+theme_bw()
 p1
 g1<-glm(EXP1$Cq~EXP1$Treatment)
-summary(g1)
+summary(g1) #not signficantly different 
 ```
 
 
