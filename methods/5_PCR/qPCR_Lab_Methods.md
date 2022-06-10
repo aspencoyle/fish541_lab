@@ -39,7 +39,7 @@ Final volume per well before sample cDNA addition = 19ul
 
 We prepared enough mix for each cDNA sample, a replicate for each cDNA sample, and 2 H2O controls per primer set (HSC70 and GADD45 gamma).
 
-Mix aliquoted into 96 well plates, half HSC70 mix and half GADD45 gamma mix. 1ul of 1:10 cDNA dilutions for each sample added to mix in replicate
+Mix aliquoted into 96 well plates, half HSC70 mix and half GADD45 gamma mix. 1ul of 1:10 cDNA dilutions for each sample added to mix with replicate (2 wells per sample total).
 
 ### qPCR run and data collection
 
