@@ -8,7 +8,7 @@ Primers were initially selected according to the methods used in [DNA Damage and
 
 The following primers for stress related genes were tested using pooled cDNA samples from all 20 individuals in experiment 1.
 
-![image](https://github.com/afcoyle/fish541_lab/blob/main/assets/img/qPCR_PrimerList.jpeg?raw=true)
+![image](https://github.com/afcoyle/fish541_lab/blob/main/resources/img/qPCR_PrimerList.jpeg?raw=true)
 
 Good amplification was observed for HSC70 and GADD45 gamma, so we selected primers for these genes as our stress response biomarkers. We used HSC70 and GADD45 gamma primers to complete qPCR for all samples from both experiments 1 and 2.
 
@@ -46,7 +46,7 @@ Final volume per well before sample cDNA addition = 19ul
 Final volume per well should be 20ul
 
 Example Plating Scheme:
-### INSERT
+![image](https://github.com/afcoyle/fish541_lab/blob/main/resources/img/qPCR_PlatingExample.png?raw=true)
 
 ### qPCR run and data collection
 Plate preparation checklist before run:
@@ -59,4 +59,4 @@ Place plate in qPCR machine and run samples using the SYBR protocol.
 After run is complete, download data files and proceed to analysis.
 
 ### Whiteboard Overview
-![image](https://github.com/afcoyle/fish541_lab/blob/main/assets/img/qPCR_methods_overview.jpeg?raw=true)
+![image](https://github.com/afcoyle/fish541_lab/blob/main/resources/img/qPCR_methods_overview.jpeg?raw=true)
