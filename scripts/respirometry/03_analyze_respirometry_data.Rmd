@@ -37,6 +37,7 @@ all.packages <- c(list.of.packages, bioconductor.packages)
 lapply(all.packages, FUN = function(X) {
   do.call("require", list(X))
 })
+
 ```
 # Read in data
 
@@ -53,23 +54,25 @@ resp_dat$date <- as.character(resp_dat$date)
 
 
 ```{r}
+library(ggplot2)
 pdf(file = "../../output/EXP_2/respirometry/results_bar_graph.pdf")
-ggplot(data = test, aes(x = date, y = umol_L_hr_cm, fill = trt)) +
+ggplot(data = resp_dat, aes(x = date, y = umol_L_hr_cm, fill = trt)) +
   geom_bar(position = "dodge", stat = "identity")
 
 dev.off()
-
 ```
 
 
 # Graph 2: Scatter plot of value before and after treatment
 
 ```{r}
-resp_dat %>%
-  group_by(mussel_ID) %>%
-  ggplot(aes(x = date, y = umol_L_hr_cm, col = trt)) +
-  geom_point()
-
+library(tidyverse)
+#install.packages("gapminder")
+library(gapminder)
+resp_dat %>% 
+  ggplot(aes(date, umol_L_hr_cm))+
+  geom_point(aes(color=trt), size=3)+
+  geom_line(aes(group=mussel_ID), color="grey")+theme_bw()
 
 ```
 
