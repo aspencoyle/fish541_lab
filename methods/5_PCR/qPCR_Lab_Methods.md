@@ -28,12 +28,18 @@ Resulting in:
 * 10uM GADD45 gamma Forward
 * 10uM GADD45 gamma Reverse
 
-### Mix Preparation
+### Mix Preparation and Plating
 **Separate mix made for each primer set, one for HSC70 F/R and another for GADD45 gamma** 
 Mix of dNTPs, buffer, polymerase, molecular grade H20, and forward/reverse primers made to follow specifications per sample:
-* 
+* 10ul Super Mix (includes 5X M-MLV RT Buffer, 10nM dNTPs, M-MLV Reverse Transcriptase)
+* 7ul molecular grade H2O
+* 1ul Forward 10uM primer
+* 1ul Reverse 10uM primer
+Final volume per well before sample cDNA addition = 19ul
 
-### Plating
+We prepared enough mix for each cDNA sample, a replicate for each cDNA sample, and 2 H2O controls per primer set (HSC70 and GADD45 gamma).
+
+Mix aliquoted into 96 well plates, half HSC70 mix and half GADD45 gamma mix. 1ul of 1:10 cDNA dilutions for each sample added to mix in replicate
 
 ### qPCR run and data collection
 
