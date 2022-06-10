@@ -29,3 +29,9 @@ The chronic treatment (group A) showed significantly higher signs of stress than
 
 ![iamge](https://github.com/afcoyle/fish541_lab/blob/main/resources/img/HSC70_violin_plot.png?raw=true)
 
+An increase in respiration between 12C and 18C condition was observed for most individuals from the chronic treatment (group A), with some individuals exhibiting a drastic increase. Change in respiration was much more variable for the variable treatment (group B).
+
+![image](https://github.com/afcoyle/fish541_lab/blob/main/output/EXP_2/respirometry/exp2_resp_pairwise_plot.png?raw=true)
+
+Initial results from qPCR and respirometry suggest that duration and consistency of high heat conditions are important factors in the elicitation of heat stress response in mussels. Chronic heat stress, over the course of a number of days rather than hours, produced more of a stress response than variable temperature conditions. It may be that variable conditions, which frequently dip back down to more ideal temperatures, provide recovery time for mussels, decreasing the need for the measured stress responses.
+
