@@ -23,10 +23,10 @@ Forward and reverse primers are sent at 100uM concentration. Dilute primers to 1
 * 10ul primer
 
 Resulting in:
-* 10uM HSC70 Forward
-* 10uM HSC70 Reverse
-* 10uM GADD45 gamma Forward
-* 10uM GADD45 gamma Reverse
+* 100ul of 10uM HSC70 Forward
+* 100ul of 10uM HSC70 Reverse
+* 100ul of 10uM GADD45 gamma Forward
+* 100ul of 10uM GADD45 gamma Reverse
 
 ### Mix Preparation and Plating
 **Separate mix made for each primer set, one for HSC70 F/R and another for GADD45 gamma**
@@ -46,6 +46,7 @@ Final volume per well before sample cDNA addition = 19ul
 Final volume per well should be 20ul
 
 Example Plating Scheme:
+
 ![image](https://github.com/afcoyle/fish541_lab/blob/main/resources/img/qPCR_PlatingExample.png?raw=true)
 
 ### qPCR run and data collection
