@@ -5,7 +5,7 @@ course: FISH 541
 ---
 
 ### Set-up
-The PreSens 10-Channel OXY-10 ST (G2) oxygen meter was used with Oxygen Dipping Probe DP-PSt7 and after market temperature probes to assess the oxygen consumption of mussels. The meter, probe, and technical specifications of the meter are found below.
+The PreSens 10-Channel OXY-10 ST (G2) oxygen meter was used with Oxygen Dipping Probe DP-PSt7 and after market temperature probes to assess the oxygen consumption of mussels. The meter, probe, and technical specifications of the meter are found below. The meter guide is unavailable online as this model has been discontinued.
 
 ![image](https://github.com/afcoyle/fish541_lab/blob/main/methods/1_Respirometry/photos/Respirometer.PNG)
 ![image](https://github.com/afcoyle/fish541_lab/blob/main/methods/1_Respirometry/photos/O2probe.PNG)
