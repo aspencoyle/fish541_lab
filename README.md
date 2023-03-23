@@ -3,7 +3,7 @@
 1. [RNAzol RNA Extraction Protocol](https://github.com/mattgeorgephd/NOPP-gigas-ploidy-temp/blob/main/202107_EXP2/tag-seq/RNAzol_RT_extraction_protocol.docx)
 2. [Ramp/Soak Temperature Controller Manual](https://www.dropbox.com/s/3okvpqwuyb3vhjj/SYL-2352P%20Manual%20%282%29.pdf?dl=0)
 3. [qPCR Protocol](https://github.com/RobertsLab/resources/blob/master/protocols/reverse_transcription.md)
-4. [respirometry results](https://github.com/afcoyle/fish541_lab/blob/main/respirometry/output/respirometry_summary.xlsx)
+4. [respirometry results](https://github.com/afcoyle/fish541_lab/blob/main/output/EXP_2/respirometry/respirometry_summary.xlsx)
 
 Experiment 1: <br/>
 1 hour exposure  <br/>
