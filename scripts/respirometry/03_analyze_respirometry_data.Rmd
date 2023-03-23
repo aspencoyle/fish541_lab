@@ -42,7 +42,7 @@ my_theme <- theme(line              = element_line(size=1.2),
                   # axis.line         = element_line(color = "black", size = 0.1),
                   panel.border      = element_rect(color = "black", fill=NA, size=1.2)
                   # legend.key        = element_blank(), # removes background of legend bullets
-                  #legend.position   = "none"
+                  # legend.position   = "none"
                   ) 
 ```
 # Read in data
@@ -70,13 +70,13 @@ bp1 <-  ggplot(resp_dat, aes(x=as.factor(date), y=umol_L_hr_cm,
 
 bp1
 
-ggsave("output/EXP_2/respirometry/bp_resp.png",
-       plot   = bp1,
-       dpi    = 1200,
-       device = "png",
-       width  = 3,
-       height = 4,
-       units  = "in")
+# ggsave("output/EXP_2/respirometry/bp_resp.png",
+#        plot   = bp1,
+#        dpi    = 1200,
+#        device = "png",
+#        width  = 4,
+#        height = 4,
+#        units  = "in")
 
 ```
 # Graph 2: Scatter plot of value before and after treatment
