@@ -35,7 +35,7 @@ An increase in respiration between 12C and 18C condition was observed for most i
 
 Initial results from qPCR and respirometry suggest that duration and consistency of high heat conditions are important factors in the elicitation of heat stress response in mussels. Chronic heat stress, over the course of a number of days rather than hours, produced more of a stress response than variable temperature conditions. It may be that variable conditions, which frequently dip back down to more ideal temperatures, provide recovery time for mussels, decreasing the need for the measured stress responses.
 
-Boxplot of respirometry analysis
+Boxplot of respirometry data. Acute was previously labeled as "control", but was actually measurements after directly placing mussels from 12 to 18. An actual "control" can be generated from baseline measurements of all mussels at 12 C. Stats were generated using a two-way repeated measures ANOVA, with mussel ID as a random effect.
 
 ![image](https://github.com/afcoyle/fish541_lab/blob/main/output/EXP_2/respirometry/bp_resp_figure.png)
 
