@@ -17,54 +17,69 @@ Respiration data was collected on 10 experimental mussels from each experimental
 First, load all required libraries, installing those that aren't yet loaded
 
 ```{r libraries, message = FALSE, warning=FALSE}
+## clear workspace
+rm(list=ls())
+
 # Add all required libraries that are installed with install.packages() here
-list.of.packages <- c("tidyverse", "readxl")
-# Add all libraries that are installed using BiocManager here
-bioconductor.packages <- ""
+load.lib <- c("tidyverse", "readxl","bestNormalize","agricolae","multcomp")
+install.lib <- load.lib[!load.lib %in% installed.packages()] # Select missing packages
+for(lib in install.lib) install.packages(lib,dependencies=TRUE) # Install missing packages + dependencies
+sapply(load.lib,require,character=TRUE) # Load all packages.
 
-# Install BiocManager if needed
-if(!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-
-# Get names of all required packages that aren't installed
-new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[, "Package"])]
-new.bioc.packages <- bioconductor.packages[!(bioconductor.packages %in% installed.packages()[, "Package"])]
-# Install all new packages
-if(length(new.packages)) install.packages(new.packages)
-if(length(new.bioc.packages)) BiocManager::install(new.bioc.packages)
-
-# Load all required libraries
-all.packages <- c(list.of.packages, bioconductor.packages)
-lapply(all.packages, FUN = function(X) {
-  do.call("require", list(X))
-})
-
+## Set ggplot theme
+my_theme <- theme(line              = element_line(size=1.2),
+                  rect              = element_rect(size=1.2),
+                  text              = element_text(size=14,color="black"),
+                  panel.background  = element_blank(),
+                  panel.grid.major  = element_blank(), 
+                  panel.grid.minor  = element_blank(),
+                  axis.text.x       = element_text(size=16,color="black"), #,angle=90),
+                  axis.text.y       = element_text(size=16,color="black"),
+                  axis.title.x      = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+                  axis.title.y      = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0)),
+                  axis.ticks.x      = element_line(color="black"),
+                  axis.ticks.y      = element_line(color="black"),
+                  # axis.line         = element_line(color = "black", size = 0.1),
+                  panel.border      = element_rect(color = "black", fill=NA, size=1.2)
+                  # legend.key        = element_blank(), # removes background of legend bullets
+                  # legend.position   = "none"
+                  ) 
 ```
 # Read in data
 
 ```{r}
 # Read in respiration data
-
-resp_dat <- read_excel("../../output/EXP_2/respirometry/respirometry_summary.xlsx")
+resp_dat <- read_excel("output/EXP_2/respirometry/respirometry_summary.xlsx")
 
 # Change date from linear to binary
 resp_dat$date <- as.character(resp_dat$date)
 ```
 
-# Graph 1: Bar graph of time and treatment
-
-
+# Graph 1: Boxplots of time and treatment
 ```{r}
-library(ggplot2)
-pdf(file = "../../output/EXP_2/respirometry/results_bar_graph.pdf")
-ggplot(data = resp_dat, aes(x = date, y = umol_L_hr_cm, fill = trt)) +
-  geom_bar(position = "dodge", stat = "identity")
+### boxplots, controls
+bp1 <-  ggplot(resp_dat, aes(x=as.factor(date), y=umol_L_hr_cm, 
+                                       group=as.factor(bp_list), fill=bp_list)) +
+        geom_boxplot(colour = "black", size = 0.8,outlier.colour="black", outlier.shape = 16,
+                     outlier.size=1, notch=FALSE, varwidth = TRUE, alpha = 0.9) +
+        scale_fill_manual(values=c("orangered1","red","grey","orange")) +
+        # scale_y_continuous(breaks = seq(0, 2.5, 0.5), limits = c(0, 2.7)) +
+        # scale_x_continuous(breaks = seq(0, 30, 5), limits = c(0, 32)) + 
+        xlab(NULL) + ylab(NULL) + 
+        my_theme
 
-dev.off()
+bp1
+
+# ggsave("output/EXP_2/respirometry/bp_resp.png",
+#        plot   = bp1,
+#        dpi    = 1200,
+#        device = "png",
+#        width  = 4,
+#        height = 4,
+#        units  = "in")
+
 ```
-
-
 # Graph 2: Scatter plot of value before and after treatment
-
 ```{r}
 library(tidyverse)
 #install.packages("gapminder")
@@ -75,4 +90,54 @@ resp_dat %>%
   geom_line(aes(group=mussel_ID), color="grey")+theme_bw()
 
 ```
+
+# Statistical Testing
+```{r}
+# Define dataset for analysis, factors
+dat_stat <- resp_dat
+test_me <- dat_stat$umol_L_hr_cm
+
+dat_stat$ID         <- factor(dat_stat$mussel_ID)
+dat_stat$trt        <- factor(dat_stat$trt_stat)
+dat_stat$timepoint  <- factor(dat_stat$date)
+
+# Test for normality
+qqnorm(test_me) # check linearity of transformed data
+qqline(test_me)
+norm_test <- shapiro.test(test_me) # p-value fail = good, don't need transformation
+print(norm_test$p.value)
+
+# Normalize data if normality test failed
+if(norm_test$p.value<0.05)     {
+        normalized <- bestNormalize(test_me)
+        test_me <- normalized$x.t # overwrite
+        qqnorm(test_me) # check linearity of transformed data
+        qqline(test_me)
+        print(shapiro.test(test_me))
+        print("transformed!",quote=FALSE)}
+
+dat_stat$response <- test_me
+
+# Run repeated measures anova using oyster ID has random effect
+# https://www.r-bloggers.com/2015/08/two-way-anova-with-repeated-measures/
+my_test <- aov(response ~ timepoint * trt + Error(1/ID),
+                       data = dat_stat)
+
+my_test_summary <- summary(my_test)
+summary(my_test)
+
+# # Significant interaction observed between timepoint:trt:ploidy. Proceed with HSD test.
+# tx <- with(dat_stat, interaction(timepoint,trt,ploidy))
+# amod <- aov(response ~ tx, data = dat_stat)
+# mult_comp <- HSD.test(amod, "tx", group=TRUE, console=TRUE)
+
+# # save output
+# write.table(my_test_summary$`Error: Within`[[1]], file = "stats/respirometry/AOV_respirometry.csv",      row.names = TRUE)
+# write.table(mult_comp$groups,                     file = "stats/respirometry/HSD_test_respirometry.csv", row.names = TRUE)
+
+
+```
+
+
+
 

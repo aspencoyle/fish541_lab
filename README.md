@@ -3,7 +3,7 @@
 1. [RNAzol RNA Extraction Protocol](https://github.com/mattgeorgephd/NOPP-gigas-ploidy-temp/blob/main/202107_EXP2/tag-seq/RNAzol_RT_extraction_protocol.docx)
 2. [Ramp/Soak Temperature Controller Manual](https://www.dropbox.com/s/3okvpqwuyb3vhjj/SYL-2352P%20Manual%20%282%29.pdf?dl=0)
 3. [qPCR Protocol](https://github.com/RobertsLab/resources/blob/master/protocols/reverse_transcription.md)
-4. [respirometry results](https://github.com/afcoyle/fish541_lab/blob/main/respirometry/output/respirometry_summary.xlsx)
+4. [respirometry results](https://github.com/afcoyle/fish541_lab/blob/main/output/EXP_2/respirometry/respirometry_summary.xlsx)
 
 Experiment 1: <br/>
 1 hour exposure  <br/>
@@ -34,4 +34,8 @@ An increase in respiration between 12C and 18C condition was observed for most i
 ![image](https://github.com/afcoyle/fish541_lab/blob/main/output/EXP_2/respirometry/exp2_resp_pairwise_plot.png?raw=true)
 
 Initial results from qPCR and respirometry suggest that duration and consistency of high heat conditions are important factors in the elicitation of heat stress response in mussels. Chronic heat stress, over the course of a number of days rather than hours, produced more of a stress response than variable temperature conditions. It may be that variable conditions, which frequently dip back down to more ideal temperatures, provide recovery time for mussels, decreasing the need for the measured stress responses.
+
+Boxplot of respirometry data. Acute was previously labeled as "control", but was actually measurements after directly placing mussels from 12 to 18. An actual "control" can be generated from baseline measurements of all mussels at 12 C. Stats were generated using a two-way repeated measures ANOVA, with mussel ID as a random effect.
+
+![image](https://github.com/afcoyle/fish541_lab/blob/main/output/EXP_2/respirometry/bp_resp_figure.png)
 
